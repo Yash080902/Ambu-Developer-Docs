@@ -117,8 +117,6 @@ When your reviewer has completed their review, they will reassign the pull reque
 
 * Make a new commit addressing the comments you agree with, and push it to the same branch. (Continue to use descriptive commit messages, or something like "Address review comments" if you're addressing many disparate review comments in the same commit.) **You do not need to close your pull request and create a new one -- it's fine to push new commits to the existing pull request.**
 
-* **Always make commits locally, and then push to GitHub.** Don't make changes using the online GitHub editor -- this bypasses lint/presubmit checks, and will cause the code on GitHub to diverge from the code on your machine.
-
 * **Never force-push changes to GitHub, or rebase your PR.** This will lead to the PR being closed.
 
 * As you are making changes, track them by replying to each comment via the Files Changed tab. Each reply should be either "Done" or a response explaining why the corresponding suggestion wasn't implemented. Also, please **do not** mark the comment as resolved, since this just makes it harder to actually read the comment thread. Also, please **use the 'Start a review' button** (rather than the 'Add single comment' button) to write draft comments, so that you don't publish them before the code is ready.
@@ -135,19 +133,7 @@ When your reviewer has completed their review, they will reassign the pull reque
 
   * Verify that you've posted responses to **all** the review comments from the reviewer(s). (If you see "Pending" labels next to your comments, that means it hasn't been submitted yet and others cannot see it. To fix this, make sure you've actually clicked through the green "Review changes > Submit review" button in the top right of the Files Changed tab.)
 
-  * In the conversation thread, **write a top-level comment** explicitly asking the reviewer(s) to take another look ("@XXX PTAL"), and assign them to the PR. Be sure to use the **"Assignees"** rather than the "Reviewers" section of the PR, since the latter field is auto-populated by GitHub and reviewers typically don't track it.
-
-## Step 6: Make sure all continuous integration checks pass
-
-While waiting to get approval from reviewers, make sure that all the continuous integration (CI) checks (GitHub Actions, CircleCI, etc.) pass, since otherwise you won't be able to merge your pull requests. CI checks are shown at the bottom of your pull request on GitHub.
-
-![CI results at the bottom of a PR](images/prCiResults.png)
-
-(See [[If CI checks fail on your PR|If-CI-checks-fail-on-your-PR]] for some suggestions on what to do if you run into issues.)
-
-If all reviewers have approved but you're still waiting for the CI checks to pass, make sure you're assigned to the PR, so that you can merge it once the CI checks are complete.
-
-## Step 7: Tidy up
+## Step 6: Tidy up
 
 After the PR status has changed to "Merged", delete the feature branch from both your local clone and the GitHub repository:
 
