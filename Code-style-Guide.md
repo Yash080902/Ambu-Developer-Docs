@@ -7,7 +7,7 @@ If you use [Sublime Text](http://www.sublimetext.com/), consider installing the 
 - Strings should use single quotes (`'`) throughout Python and JavaScript.
 - Prefer having comments on their own line (above the code that's being commented on), as opposed to next to a line. The exception is when you need to disable a pylint warning for a specific line.
 - The last character in each file should be a newline. (If you're using Sublime, you can enforce this locally by adding `"ensure_newline_at_eof_on_save": true` to your user preferences file.)
-- Avoid introducing `TODO (#XYZ): ...` comments in the files and instead try to do things correctly the first time. If you are going to add a TODO comment in any file then there needs to be (at minimum) a full comment and justification explaining what has been tried and what the issue is. The TODo should also reference an issue created on GitHub for thracking the problem.
+- Avoid introducing `TODO (#XYZ): ...` comments in the files and instead try to do things correctly the first time. If you are going to add a TODO comment in any file then there needs to be (at minimum) a full comment and justification explaining what has been tried and what the issue is. The TODo should also reference an issue created on GitHub for tracking the problem.
 
 ## Design tips
 - Avoid referencing elements of a list by a hardcoded index number, e.g. `item[0]`, `item[1]`. This is because the reader typically has no idea what is significant about the element index in question. If the values in the list are of different types, consider using a domain object instead to model the item being passed around.
@@ -86,12 +86,12 @@ _General note: We use the ES2017 standard for our JavaScript/TypeScript code.
    For example:
 
    - For a boolean variable to check if a card is displayed:
-        - Correct: `cardIsDisplayed`
-        - Wrong: `isCardDisplayed`
+        - Correct: `isCardDisplayed`
+        - Wrong: `cardIsDisplayed`
 
    - For a function to check if a card is displayed:
-        - Correct: `isCardDisplayed()`
-        - Wrong: `cardIsDisplayed()`
+        - Correct: `cardIsDisplayed()`
+        - Wrong: `isCardDisplayed()`
 
 - The dependencies mentioned in strings and functional parameters of controllers, directives and factories should be in the following manner: dollar imports (e.g. ```$log, $scope``` etc.), regular imports (e.g. ```ContextService, PageService``` etc.), and constant imports (e.g ```COLLECTION_TAGS, DELETE_COLLECTION``` etc.) all in sorted order.
 
